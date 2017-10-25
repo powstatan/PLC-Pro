@@ -319,7 +319,7 @@ For Each c In Worksheets(sheetname).Range("A6:A42")
             If (c.End(xlToRight).Value >= 0.7945) Then
                 Range("A" & cellCounter).Value = "Dear Parents of " & c.Value & "," & _
                 vbNewLine & vbNewLine & "We just finished our " & c.Offset(topRowFinder, 3).Value & " test on " & _
-                StrConv(c.Offset(topRowFinder, 4).Value, vbLowerCase) & ".  " & vbNewLine & _
+                StrConv(c.Offset(topRowFinder, 4).Value, vbLowerCase) & ". " & vbNewLine & _
                 Split(c.Value, " ")(0) & " scored " & c.End(xlToRight).Offset(0, -1).Value & " out of " & _
                 c.End(xlToRight).Offset(topRowFinder + 3, -1).Value & _
                 ", which is " & Round((c.End(xlToRight).Value * 100), 0) & "%!  Congratulations!!" & _
@@ -327,7 +327,7 @@ For Each c In Worksheets(sheetname).Range("A6:A42")
             Else
                 Range("A" & cellCounter).Value = "Dear Parents of " & c.Value & "," & _
                 vbNewLine & vbNewLine & "We just finished our " & c.Offset(topRowFinder, 3).Value & " test on " & _
-                StrConv(c.Offset(topRowFinder, 4).Value, vbLowerCase) & ".  " & vbNewLine & _
+                StrConv(c.Offset(topRowFinder, 4).Value, vbLowerCase) & ". " & vbNewLine & _
                 Split(c.Value, " ")(0) & " scored " & c.End(xlToRight).Offset(0, -1).Value & " out of " & _
                 c.End(xlToRight).Offset(topRowFinder + 3, -1).Value & _
                 ", which is " & Round((c.End(xlToRight).Value * 100), 0) & "%." & _
